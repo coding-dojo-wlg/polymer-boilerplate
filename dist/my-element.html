@@ -3,6 +3,9 @@
 
 <!-- Define your custom element -->
 <polymer-element name="my-element">
+    <template>
+      <span>Hello from <b>my-element</b>. This is my Shadow DOM.</span>
+    </template>
 
     <script>
         Polymer('my-element', {
@@ -13,7 +16,9 @@
             domReady: function() {},
 
             // Fires when the "<polymer-element>" has been fully prepared
-            ready: function() {},
+            ready: function() {
+                this.$.el.textContent = this.owner + " is ready!";
+            },
 
             // Fires when the element was inserted into the document
             attached: function() {},

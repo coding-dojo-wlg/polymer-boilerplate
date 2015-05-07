@@ -2,10 +2,15 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
 <!-- Define your custom element -->
-<polymer-element name="my-element">
+<polymer-element name="user-card" attributes="name email username">
+    <template>
+        <h1>{{ name }}</h1>
+        <h4>{{ username }}</h4>
+        <h4>{{ email }}</h4>
+    </template>
 
     <script>
-        Polymer('my-element', {
+        Polymer('user-card', {
             // Fires when an instance of the element is created
             created: function() {},
 
